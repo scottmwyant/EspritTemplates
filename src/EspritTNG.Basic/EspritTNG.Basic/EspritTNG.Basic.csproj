@@ -26,7 +26,6 @@
     <DebugType>pdbonly</DebugType>
     <PlatformTarget>x64</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <StartAction>Program</StartAction>
     <StartProgram>$(ProgramW6432)\D.P.Technology\ESPRIT TNG\Prog\ESPRIT.exe</StartProgram>
@@ -36,9 +35,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <Optimize>true</Optimize>
     <RegisterForComInterop>false</RegisterForComInterop>
+    <DebugType>None</DebugType>
     <PlatformTarget>x64</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <StartAction>Program</StartAction>
     <StartProgram>$(ProgramW6432)\D.P.Technology\ESPRIT TNG\Prog\ESPRIT.exe</StartProgram>

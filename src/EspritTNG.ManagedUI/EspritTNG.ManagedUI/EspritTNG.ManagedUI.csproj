@@ -26,19 +26,18 @@
     <DebugType>pdbonly</DebugType>
     <PlatformTarget>x64</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <StartAction>Program</StartAction>
     <StartProgram>$(ProgramW6432)\D.P.Technology\ESPRIT TNG\Prog\ESPRIT.exe</StartProgram>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <DebugType>None</DebugType>
     <OutputPath>$(Public)\Documents\D.P.Technology\ESPRIT TNG\Data\Extensions\EspritTNG.ManagedUI\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <Optimize>true</Optimize>
     <RegisterForComInterop>false</RegisterForComInterop>
     <PlatformTarget>x64</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <StartAction>Program</StartAction>
     <StartProgram>$(ProgramW6432)\D.P.Technology\ESPRIT TNG\Prog\ESPRIT.exe</StartProgram>
