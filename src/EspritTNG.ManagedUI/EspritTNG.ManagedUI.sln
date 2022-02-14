@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31911.196
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EspritTNG.ManagedUI", "EspritTNG.ManagedUI\EspritTNG.ManagedUI.csproj", "{18E4E84B-D5D0-414A-83DF-68A25BF223E5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{18E4E84B-D5D0-414A-83DF-68A25BF223E5}.Debug|x64.ActiveCfg = Debug|x64
+		{18E4E84B-D5D0-414A-83DF-68A25BF223E5}.Debug|x64.Build.0 = Debug|x64
+		{18E4E84B-D5D0-414A-83DF-68A25BF223E5}.Release|x64.ActiveCfg = Release|x64
+		{18E4E84B-D5D0-414A-83DF-68A25BF223E5}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C16B3C1A-03E5-4496-879A-8A3C68D7F83B}
+	EndGlobalSection
+EndGlobal
