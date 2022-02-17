@@ -1,0 +1,844 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9CBA67CF-099D-470B-BE1C-E4D1A4B80084}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TutorialCSharp</RootNamespace>
+    <AssemblyName>TutorialCSharp</AssemblyName>
+    <TargetFrameworkVersion>4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile></TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp></NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>$(Public)\Documents\D.P.Technology\ESPRIT TNG\Data\Extensions\TutorialCSharp\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <StartAction>Program</StartAction>
+    <StartProgram>C:\Program Files\D.P.Technology\ESPRIT TNG\Prog\ESPRIT.exe</StartProgram>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>$(Public)\Documents\D.P.Technology\ESPRIT TNG\Data\Extensions\TutorialCSharp\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <StartAction>Program</StartAction>
+    <StartProgram>C:\Program Files\D.P.Technology\ESPRIT TNG\Prog\ESPRIT.exe</StartProgram>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ReferencePath>C:\Program Files\D.P.Technology\ESPRIT TNG\Prog\</ReferencePath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DPSharedWPF">
+      <HintPath>C:\Program Files\D.P.Technology\ESPRIT TNG\Prog\DPSharedWPF.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ESPRIT.NetApi, Version=20.408.0.19299, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\D.P.Technology\ESPRIT TNG\Prog\ESPRIT.NetApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.Esprit">
+      <HintPath>C:\Program Files\D.P.Technology\ESPRIT TNG\Prog\Interop.Esprit.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.EspritComBase">
+      <HintPath>C:\Program Files\D.P.Technology\ESPRIT TNG\Prog\Interop.EspritComBase.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.EspritConstants">
+      <HintPath>C:\Program Files\D.P.Technology\ESPRIT TNG\Prog\Interop.EspritConstants.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.EspritFeatures">
+      <HintPath>C:\Program Files\D.P.Technology\ESPRIT TNG\Prog\Interop.EspritFeatures.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.EspritGeometry">
+      <HintPath>C:\Program Files\D.P.Technology\ESPRIT TNG\Prog\Interop.EspritGeometry.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.EspritGeometryBase">
+      <HintPath>C:\Program Files\D.P.Technology\ESPRIT TNG\Prog\Interop.EspritGeometryBase.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.EspritProperties">
+      <HintPath>C:\Program Files\D.P.Technology\ESPRIT TNG\Prog\Interop.EspritProperties.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.EspritSolids">
+      <HintPath>C:\Program Files\D.P.Technology\ESPRIT TNG\Prog\Interop.EspritSolids.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.EspritTechnology">
+      <HintPath>C:\Program Files\D.P.Technology\ESPRIT TNG\Prog\Interop.EspritTechnology.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.EspritTools">
+      <HintPath>C:\Program Files\D.P.Technology\ESPRIT TNG\Prog\Interop.EspritTools.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="stdole" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Tutorials\AdditiveDEDTutorial\AdditiveDED.xaml.cs" />
+    <Compile Include="Tutorials\AdditiveDEDTutorial\AdditiveDEDTutorial.cs" />
+    <Compile Include="Tutorials\BalancedTurningTutorial.cs" />
+    <Compile Include="Tutorials\BaseTutorial.cs" />
+    <Compile Include="Tutorials\CreateCustomFeatureHolesTutorial.cs" />
+    <Compile Include="Tutorials\CreatePartSetupWorkpieceTutorial.cs" />
+    <Compile Include="Tutorials\CreateMachineSetupTutorial.cs" />
+    <Compile Include="Tutorials\FeatureHolesRecognitionTutorial.cs" />
+    <Compile Include="Tutorials\GroupSolidEntitiesTutorial.cs" />
+    <Compile Include="Tutorials\RotaryMillingTutorial\RotaryMilling.xaml.cs" />
+    <Compile Include="Tutorials\RotaryMillingTutorial\RotaryMillingTutorial.cs" />
+    <Compile Include="Tutorials\ScanFeatureHolesTutorial.cs" />
+    <Compile Include="Tutorials\ScanPartSetupTutorial.cs" />
+    <Compile Include="Tutorials\ScanMachineSetupTutorial.cs" />
+    <Compile Include="Tutorials\ExportMachineSetupDataTutorial\ExportMachineSetupDataTutorial.cs" />
+    <Compile Include="Tutorials\ExportMachineSetupDataTutorial\MachineSetupDialog.xaml.cs">
+      <DependentUpon>MachineSetupDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\Helpers\GraphicObjectHelper.cs" />
+    <Compile Include="Tutorials\Helpers\ColorHelper.cs" />
+    <Compile Include="Tutorials\Helpers\Geometry.cs" />
+    <Compile Include="Tutorials\Helpers\FeatureHelper.cs" />
+    <Compile Include="Tutorials\Helpers\LayerHelpers.cs" />
+    <Compile Include="Tutorials\Helpers\PlaneHelper.cs" />
+    <Compile Include="Tutorials\Helpers\RegistryHelper.cs" />
+    <Compile Include="Tutorials\Helpers\SelectionSetHelper.cs" />
+    <Compile Include="Tutorials\Helpers\WindowHelper.cs" />
+    <Compile Include="Tutorials\IntegrateClassModulesAndFormsTutorial\BoltHoleManager.xaml.cs">
+      <DependentUpon>BoltHoleManager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\IntegrateClassModulesAndFormsTutorial\BoltHolePattern.xaml.cs">
+      <DependentUpon>BoltHolePattern.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\IntegrateClassModulesAndFormsTutorial\BoltHolePatternModel.cs" />
+    <Compile Include="Tutorials\CreateCurvesFromAnyEquationTutorial\EvaluateDialog.xaml.cs">
+      <DependentUpon>EvaluateDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\CreateCurvesFromAnyEquationTutorial\CreateCurvesFromAnyEquationTutorial.cs" />
+    <Compile Include="Tutorials\SwarfCycleTutorial.cs" />
+    <Compile Include="Tutorials\ToolingCustomSetupSheetTutorial\ToolSetupSheetDialog.xaml.cs">
+      <DependentUpon>ToolSetupSheetDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\ToolingCustomSetupSheetTutorial\ToolingCustomSetupSheetTutorial.cs" />
+    <Compile Include="Tutorials\CustomOperationSetupSheetTutorial\OperationSetupSheetDialog.xaml.cs">
+      <DependentUpon>OperationSetupSheetDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorials\CustomOperationSetupSheetTutorial\CustomOperationSetupSheetTutorial.cs" />
+    <Compile Include="Tutorials\SwapLayersTutorial.cs" />
+    <Compile Include="Tutorials\ClassModulesTutorial.cs" />
+    <Compile Include="Tutorials\BoltHolePatternTutorial.cs" />
+    <Compile Include="Tutorials\BoltHolePatternExpandTutorial.cs" />
+    <Compile Include="Tutorials\IntegrateClassModulesAndFormsTutorial\IntegrateClassModulesAndFormsTutorial.cs" />
+    <Compile Include="Tutorials\CustomPropertiesTutorial.cs" />
+    <Compile Include="Tutorials\RespondToEspritEventsTutorial.cs" />
+    <Compile Include="Tutorials\DocumentEventsTutorial.cs" />
+    <Compile Include="Tutorials\AutoSaveTutorial.cs" />
+    <Compile Include="Tutorials\GraphicsEventsTutorial.cs" />
+    <Compile Include="Tutorials\RespondingToCustomPropertyChangesTutorial.cs" />
+    <Compile Include="Tutorials\FitAllWindowsTutorial.cs" />
+    <Compile Include="Tutorials\GuiAndToolsEventsTutorial.cs" />
+    <Compile Include="Tutorials\PartsProgrammingTutorial.cs" />
+    <Compile Include="Tutorials\ReorderingOperationsTutorial.cs" />
+    <Compile Include="Tutorials\InsertOperationsTutorial.cs" />
+    <Compile Include="Tutorials\ExaminingToolpathTutorial.cs" />
+    <Compile Include="Tutorials\CenterLineVisibleCirclesTutorial.cs" />
+    <Compile Include="Tutorials\SmashingToolpathToGeometryTutorial.cs" />
+    <Compile Include="Tutorials\TraditionalMillingTutorial\TraditionalMilling.xaml.cs" />
+    <Compile Include="Tutorials\TraditionalMillingTutorial\TraditionalMillingTutorial.cs" />
+    <Compile Include="Tutorials\UndoTutorial.cs" />
+    <Compile Include="Tutorials\ToolpathZLevelEntryExitTutorial.cs" />
+    <Compile Include="Tutorials\CustomCyclesTutorial.cs" />
+    <Compile Include="Tutorials\FeatureChainVisibleCirclesTutorial.cs" />
+    <Compile Include="Tutorials\SimulationTutorial.cs" />
+    <Compile Include="Tutorials\ThrownForCurveTutorial.cs" />
+    <Compile Include="Tutorials\CreateCurvesUsingFeaturePtopTutorial.cs" />
+    <Compile Include="Tutorials\ExponentialAndSineWaveCurvesTutorial.cs" />
+    <Compile Include="Tutorials\FeatureChainVisibleCirclesArcsTutorial.cs" />
+    <Compile Include="Tutorials\CrossSectionSurfaceMeshCurvesTutorial.cs" />
+    <Compile Include="Tutorials\ExportImportPointDataTutorial.cs" />
+    <Compile Include="Tutorials\ParameterObjectTutorial.cs" />
+    <Compile Include="Tutorials\FindToolParamsTutorial.cs" />
+    <Compile Include="Tutorials\MoveP0CircleCenterTutorial.cs" />
+    <Compile Include="Tutorials\CheckingSecurityTutorial.cs" />
+    <Compile Include="Tutorials\StlFilesTutorial.cs" />
+    <Compile Include="Tutorials\FindSyncInfoTutorial.cs" />
+    <Compile Include="Tutorials\ToolAssemblyTutorial.cs" />
+    <Compile Include="Tutorials\MoveP0AnyElementCenterTutorial.cs" />
+    <Compile Include="Tutorials\MoveP0PointArcCircleCenterTutorial.cs" />
+    <Compile Include="Tutorials\ScanGraphicsCollectionTutorial.cs" />
+    <Compile Include="Tutorials\ListToolbarsTutorial.cs" />
+    <Compile Include="Tutorials\AddToolbarControlsTutorial.cs" />
+    <Compile Include="Tutorials\CreateToolsTutorial.cs" />
+    <Compile Include="Tutorials\ScanToolsTutorial.cs" />
+    <Compile Include="Tutorials\ScanToolParametersTutorial.cs" />
+    <Compile Include="Tutorials\WriteToolParametersToFileTutorial.cs" />
+    <Compile Include="Tutorials\ReadToolParametersFromFileTutorial.cs" />
+    <Compile Include="Tutorials\ScanOperationsTutorial.cs" />
+    <Compile Include="Tutorials\CalcOperationCycleTimesTutorial.cs" />
+    <Compile Include="Tutorials\SaveToEspritFileTutorial.cs" />
+    <Compile Include="Tutorials\AutoRunProceduresTutorial.cs" />
+    <Compile Include="Tutorials\TechnologiesAndOperationsTutorial.cs" />
+    <Compile Include="Tutorials\UserFormsTutorial.cs" />
+    <Compile Include="Tutorials\UserFormsMoreTutorial.cs" />
+    <Compile Include="Tutorials\UserFormsAdvancedTutorial.cs" />
+    <Compile Include="Tutorials\GroupTutorial.cs" />
+    <Compile Include="Tutorials\FeatureChainGroupedCirclesAndArcsTutorial.cs" />
+    <Compile Include="Tutorials\NamingRecallingGroupsTutorial.cs" />
+    <Compile Include="Tutorials\GroupManagerDialogTutorial.cs" />
+    <Compile Include="Tutorials\SquareFeatureChainTutorial.cs" />
+    <Compile Include="Tutorials\XYSymmetryTutorial.cs" />
+    <Compile Include="Tutorials\GridTranslationTutorial.cs" />
+    <Compile Include="Tutorials\ScanAnnotationsTutorial.cs" />
+    <Compile Include="Tutorials\ScanDimensionAndNotesTutorial.cs" />
+    <Compile Include="Tutorials\GroupDimensionRangeTutorial.cs" />
+    <Compile Include="Tutorials\CreateCenterLinesAsLeadersTutorial.cs" />
+    <Compile Include="Tutorials\RectFeatureChainTutorial.cs" />
+    <Compile Include="Tutorials\BreakLeaderTutorial.cs" />
+    <Compile Include="Tutorials\CreateNotesBlockTutorial.cs" />
+    <Compile Include="Tutorials\CreateHoleProcessingInfoTutorial.cs" />
+    <Compile Include="Tutorials\ModifyNoteTextTutorial.cs" />
+    <Compile Include="Tutorials\FunctionsTutorial.cs" />
+    <Compile Include="Tutorials\FunctionsAndSelectionSetsTutorial.cs" />
+    <Compile Include="Tutorials\SaveValuesToRegistryTutorial.cs" />
+    <Compile Include="Tutorials\RegistryValuesWithUserFormsTutorial.cs" />
+    <Compile Include="Tutorials\ConfigurationObjectTutorial.cs" />
+    <Compile Include="Tutorials\GridBackgroundTutorial.cs" />
+    <Compile Include="Tutorials\FilesAndFoldersLocationTutorial.cs" />
+    <Compile Include="Tutorials\FileImportExportTutorial.cs" />
+    <Compile Include="Tutorials\DimensioningParametersTutorial.cs" />
+    <Compile Include="Tutorials\ConfigurationManagerTutorial.cs" />
+    <Compile Include="Tutorials\ScanPlanesTutorial.cs" />
+    <Compile Include="Tutorials\CreatePlanesTutorial.cs" />
+    <Compile Include="Tutorials\PlaneManipulationMethodsTutorial.cs" />
+    <Compile Include="Tutorials\PlaneManipulationsTutorial.cs" />
+    <Compile Include="Tutorials\CustomIsoViewDialogTutorial.cs" />
+    <Compile Include="Tutorials\CenterLineCirclesTutorial.cs" />
+    <Compile Include="Tutorials\ExtractFeatureInfoTutorial.cs" />
+    <Compile Include="Tutorials\InsertPointsIntoFeaturePtopTutorial.cs" />
+    <Compile Include="Tutorials\OptimizeFeaturePtopObjectsTutorial.cs" />
+    <Compile Include="Tutorials\FeatureChainIntoSpiralTutorial.cs" />
+    <Compile Include="Tutorials\ZigzagDownFeatureChainTutorial.cs" />
+    <Compile Include="Tutorials\FeatureRecognitionIntroTutorial.cs" />
+    <Compile Include="Tutorials\FeatureRecognitionAccessingResultsTutorial.cs" />
+    <Compile Include="Tutorials\AutoRecognizeFeatureStartPointsTutorial.cs" />
+    <Compile Include="Tutorials\FeatureChainCirclesTutorial.cs" />
+    <Compile Include="Tutorials\FeatureRecognitionPartProfilesTutorial.cs" />
+    <Compile Include="Tutorials\FeatureRecognitionFaceProfileFeaturesTutorial.cs" />
+    <Compile Include="Tutorials\MachiningFaceProfilesTutorial.cs" />
+    <Compile Include="Tutorials\FeatureRecognitionPocketFeaturesTutorial.cs" />
+    <Compile Include="Tutorials\ExaminingFeatureSetsTutorial.cs" />
+    <Compile Include="ViewModels\Notifier.cs" />
+    <Compile Include="ViewModels\PaneViewModel.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="AddinUi.cs" />
+    <Compile Include="Tutorials\InputBox.cs" />
+    <Compile Include="Tutorials\ITutorial.cs" />
+    <Compile Include="Tutorials\SquareCornersTutorial.cs" />
+    <Compile Include="Tutorials\SquareFeaturePtopTutorial.cs" />
+    <Compile Include="Tutorials\SimpleSquareTutorial.cs" />
+    <Compile Include="Tutorials\SimpleSquareAnywhereTutorial.cs" />
+    <Compile Include="ViewModels\TutorialModel.cs" />
+    <None Include="TutorialCSharp_Large.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TutorialCSharp_Small.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Compile Include="Images\ImageManager.cs" />
+    <Compile Include="PaneControl.xaml.cs">
+      <DependentUpon>PaneControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="PaneControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Tutorials\AdditiveDEDTutorial\AdditiveDEDDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Tutorials\ExportMachineSetupDataTutorial\MachineSetupDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Tutorials\IntegrateClassModulesAndFormsTutorial\BoltHoleManager.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Tutorials\IntegrateClassModulesAndFormsTutorial\BoltHolePattern.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Tutorials\CreateCurvesFromAnyEquationTutorial\EvaluateDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Tutorials\RotaryMillingTutorial\RotaryMillingDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Tutorials\ToolingCustomSetupSheetTutorial\ToolSetupSheetDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Tutorials\CustomOperationSetupSheetTutorial\OperationSetupSheetDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Tutorials\TraditionalMillingTutorial\TraditionalMillingDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="html\additive_ded_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\autorun_procedures_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\auto_recognize_feature_start_points_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\auto_save_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\balanced_turning_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\bolt_hole_pattern_expand_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\bolt_hole_pattern_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\break_leader_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\CalcOperationCycleTimesEventWindow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\calc_operation_cycle_times_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\centerline_visible_circles_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\CheckingSecurityEventWindow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\checking_security_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\class_modules_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\configuration_manager_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\configuration_objects_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\create_center_lines_as_leaders_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\create_curves_from_any_equation_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\create_curves_using_featureptop_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\create_custom_feature_holes_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\create_hole_processing_info_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\create_machine_setup_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\create_notes_block_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\create_part_setup_workpiece_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\create_planes_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\create_tools_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\CreatingCurvesFromAnyEquationTutorial.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\cross_section_surface_mesh_curves_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\CustomIsoViewDialogTutorial.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\CustomOperationSetupSheetTutorial.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\custom_cycles_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\custom_iso_view_dialog_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\custom_operation_setup_sheet_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\custom_properties_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\dimensioning_parameters_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\document_events_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\ExaminingFeatureSetsEventWindow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\ExaminingToolpathEventWindow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\examining_feature_sets_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\exponential_and_sine_curves_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\export_import_point_data_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\examining_toolpath_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\export_machine_setup_data_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\ExtractFeatureInfoEventWindow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\extract_feature_info_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\featurechain_grouped_circles_arcs_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\featurechain_into_spiral_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\featurechain_visible_circles_arcs_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\featurechain_visible_circles_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\FeatureRecognitionPartProfilesEventWindow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\feature_recognition_accessing_results_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\feature_recognition_face_profile_features_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\feature_recognition_intro_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\feature_recognition_part_profiles_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\feature_recognition_pocket_features_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\FileImportExportEventWindow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\FilesAndFoldersLocationEventWindow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\files_and_folders_location_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\file_import_export_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\FindToolParamsEventWindow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\find_tool_params_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\fit_all_windows_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\FullyOptimizedFeaturePtopEventWindow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\Functions1EventWindow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\Functions2EventWindow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\Functions3EventWindow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\functions_and_selectionsets_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\functions_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\graphics_events_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\GridBackgroundTutorial.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\grid_background_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\grid_translation_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\GroupEventWindow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\GroupManagerDialogTutorial.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\GroupSolidEntitiesEventWindow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\group_dimension_range_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\group_manager_dialog_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\group_solid_entities_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\group_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\insert_points_into_featureptop_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\machining_face_profiles_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\modify_note_text_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\movep0_anyelement_center_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\movep0_circle_center_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\movep0_point_arc_circle_center_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\naming_recalling_groups_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\optimize_featureptop_objects_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\parameter_object_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\PartsProgrammingTutorial1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\PartsProgrammingTutorial2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\parts_programming_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\plane_manipulations_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\plane_manipulation_methods_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\read_tool_param_from_file_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\recognize_feature_holes_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\RegistryValuesWithUserFormsTutorial.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\registry_values_with_userforms_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\reordering_operations_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\RespondToEspritEventsEventWindow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\respond_to_custom_property_changes_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\respond_to_esprit_events_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\restoreTabs.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\rotary_milling_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\save_values_to_registry_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\ScanAnnotationsEventWindow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\ScanDimensionAndNotesTextEventWindow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\ScanGraphicsCollectionEventWindow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\ScanMachineSetupEventWindow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\ScanOperationsEventWindow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\ScanPartSetupEventWindow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\ScanPlanesEventWindow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\ScanToolParametersEventWindow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\ScanToolsEventWindow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\scan_annotations_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\scan_dimension_and_notes_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\scan_feature_holes_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\scan_graphics_collection_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\scan_machine_setup_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\scan_operations_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\scan_part_setup_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\scan_planes_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\scan_tools_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\scan_tool_param_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\SimulationTutorial.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\simulation_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\smashing_toolpath_to_geometry_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\stl_files_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\swarf_cycle_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\tab.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\tab.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\technologies_and_operations_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\ThrownForCurveEventWindow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\thrown_for_curve_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\tooling_custom_setup_sheet_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\tool_assembly_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\traditional_milling_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\tutorial.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\square_corners_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\swap_layers_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\square_featureptop_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\simple_square_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\simple_square_anywhere_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\square_feature_chain_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\rect_featurechain_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\centerline_circles_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\featurechain_circles_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\undo_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\UserFormsAdvancedEvenTutorial.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\UserFormsAdvancedStockTutorial.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\UserFormsMoreTutorial.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\UserFormsTutorial.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\userforms_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\userfroms_more_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\user_forms_advanced_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\write_tool_param_to_file_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\x_y_symmetry_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\ZigZagTutorial.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html\zigzag_down_featurechain_tutorial.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Images\CSharpEditor-grn.ico" />
+    <Resource Include="Tutorials\ExportMachineSetupDataTutorial\FolderOpened_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent></PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

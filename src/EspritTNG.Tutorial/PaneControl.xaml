@@ -1,0 +1,70 @@
+﻿<UserControl x:Class="TutorialCSharp.PaneControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TutorialCSharp"
+             d:DataContext="{d:DesignInstance Type=local:PaneViewModel}"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/DPSharedWPF;component/Resources.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    
+    <Grid>
+        <Grid.Resources>
+            <Style x:Key="DialogResultButtonStyle" TargetType="{x:Type Button}">
+                <Setter Property="Width" Value="60" />
+                <Setter Property="Height" Value="22" />
+                <Setter Property="Margin" Value="0,2,5,2" />
+            </Style>
+        </Grid.Resources>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <Grid Grid.Row="0">
+            <TreeView Grid.Column="0"  ItemsSource="{Binding Tutorials}" SelectedItemChanged="TreeViewItemSelectionChanged" Padding="3">
+                <TreeView.ItemTemplate>
+                    <HierarchicalDataTemplate ItemsSource="{Binding Tutorials}">
+                        <TextBlock Text="{Binding Name}"/>
+                    </HierarchicalDataTemplate>
+                </TreeView.ItemTemplate>
+            </TreeView>
+        </Grid>
+
+        <GridSplitter ResizeDirection="Rows" Grid.Column="0" Grid.ColumnSpan="10" 
+            Grid.Row="1" Width="Auto" Height="3" HorizontalAlignment="Stretch" 
+            VerticalAlignment="Stretch" Margin="0" Background="Gray"/>
+
+        <Frame Source="{Binding SelectedItem.HtmlPath}" Grid.Row="2" Grid.Column="0" Padding="5" NavigationUIVisibility="Hidden"/>
+
+        <StackPanel Grid.Row="3">
+            <Border
+            BorderBrush="LightGray"
+            BorderThickness="0,1,0,0">
+                <StackPanel
+                Margin="0,4"
+                HorizontalAlignment="Right"
+                Orientation="Horizontal">
+                <Button
+                    x:Name="Execute"
+                    Content="Execute"
+                    Style="{StaticResource DialogResultButtonStyle}" />
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </Grid>
+</UserControl>

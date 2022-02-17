@@ -1,0 +1,91 @@
+﻿<Window x:Class="TutorialCSharp.Tutorials.Tutorial_IntegrateClassModulesAndForms.BoltHolePattern"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             d:DataContext="{d:DesignInstance Type=local:BoltHolePatternModel}"
+             xmlns:local="clr-namespace:TutorialCSharp.Tutorials.Tutorial_IntegrateClassModulesAndForms"
+             xmlns:controls="http://dptechnology.com/DPSharedWPF"
+             mc:Ignorable="d" 
+             Title="Bolt Hole Pattern"
+             Width="400" Height="250"
+             MinWidth="400" MinHeight="250"
+             ResizeMode="NoResize"
+             d:DesignHeight="250" d:DesignWidth="400">
+    <Grid Margin="5,5,5,5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.Resources >
+                <Style TargetType="TextBlock" >
+                    <Setter Property="Margin" Value="5,5,5,5" />
+                </Style>
+            </Grid.Resources>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Row="0" Width="Auto" Text="Hole Diameter" Grid.Column="0"/>
+            <controls:NumericControl 
+                                 Grid.Row="0" Grid.Column="1"
+                                 Value="{Binding HoleDiameter, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                 NumberDigits="2"
+                                 IsEnabled="True"
+                                 VerticalContentAlignment="Center"
+                                 IsShowUpDown="False"/>
+
+            <TextBlock Grid.Row="1" Width="Auto" Text="Pattern Diameter" Grid.Column="0"/>
+            <controls:NumericControl 
+                                 Grid.Row="1" Grid.Column="1"
+                                 Value="{Binding PatternDiameter, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                 NumberDigits="2"
+                                 IsEnabled="True"
+                                 VerticalContentAlignment="Center"
+                                 IsShowUpDown="False"/>
+
+            <TextBlock Grid.Row="2" Width="Auto" Text="Start Angle" Grid.Column="0"/>
+            <controls:NumericControl 
+                                 Grid.Row="2" Grid.Column="1"
+                                 Value="{Binding StartAngle, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                 NumberDigits="2"
+                                 IsEnabled="True"
+                                 VerticalContentAlignment="Center"
+                                 IsShowUpDown="False"/>
+
+            <TextBlock Grid.Row="3" Width="Auto" Text="Angle Between" Grid.Column="0"/>
+            <controls:NumericControl 
+                                 Grid.Row="2" Grid.Column="1"
+                                 Value="{Binding AngleBetween, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                 NumberDigits="2"
+                                 IsEnabled="True"
+                                 VerticalContentAlignment="Center"
+                                 IsShowUpDown="False"/>
+
+            <TextBlock Grid.Row="4" Width="Auto" Text="Number Of Holes" Grid.Column="0"/>
+            <controls:NumericControl 
+                                 Grid.Row="2" Grid.Column="1"
+                                 Value="{Binding NumberOfHoles, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                 NumberDigits="2"
+                                 IsEnabled="True"
+                                 VerticalContentAlignment="Center"
+                                 IsShowUpDown="False"/>
+        </Grid>
+        
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Grid.Column="0" HorizontalAlignment="Right">
+            <Button x:Name="ApplyButton" Grid.Row="5" Grid.Column="0" Content="Apply" Margin="0,0,10,0" Width="100" Click="OnApplyButtonClick"/>
+            <Button x:Name="CancelButton" Grid.Row="5" Grid.Column="1" Content="Cancel" Width="100" Click="OnCancelButtonClick"/>
+        </StackPanel>
+    </Grid>
+</Window>

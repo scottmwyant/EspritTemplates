@@ -1,0 +1,43 @@
+﻿<Window x:Class="TutorialCSharp.Tutorials.Tutorial_TraditionalMilling.TraditionalMillingDialog"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TutorialCSharp.Tutorials.Tutorial_TraditionalMilling"
+             mc:Ignorable="d" 
+             Width="250"
+             Height="300"
+             ResizeMode="NoResize"
+             Title="Traditional Milling Tutorial"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid.Resources >
+            <Style TargetType="Button" >
+                <Setter Property="Margin" Value="0,5,0,0" />
+                <Setter Property="Width" Value="100" />
+            </Style>
+        </Grid.Resources>
+
+        <Button x:Name="ImportCADmodelButton" Grid.Row="0" Content="Import CAD model" Width="170"/>
+        <Button x:Name="PartSetupButton" Grid.Row="1" Content="Set up the part" Width="170"/>
+        <Button x:Name="PocketingButton" Grid.Row="2" Content="Recognize features" Width="170"/>
+        <Button x:Name="MachineButton" Grid.Row="3" Content="Set up the machine" Width="170"/>
+        <Button x:Name="MillToolButton" Grid.Row="4" Content="Add a mill tool" Width="170"/>
+        <Button x:Name="PocketOpButton" Grid.Row="5" Content="Create a pocketing operation" Width="170"/>
+        <Button x:Name="FacingOpButton" Grid.Row="6" Content="Add a facing operation" Width="170"/>
+        <Button x:Name="DrillingButton" Grid.Row="7" Content="Add drilling operations" Width="170"/>
+        <Button x:Name="SimulateButton" Grid.Row="8" Content="Simulate" Width="170"/>
+    </Grid>
+</Window>

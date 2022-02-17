@@ -1,0 +1,49 @@
+﻿<Window x:Class="TutorialCSharp.Tutorials.Tutorial_RotaryMilling.RotaryMillingDialog"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TutorialCSharp.Tutorials.Tutorial_RotaryMilling"
+             mc:Ignorable="d" 
+             Width="250"
+             Height="360"
+             ResizeMode="NoResize"
+             Title="Rotary Milling Tutorial"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid.Resources >
+            <Style TargetType="Button" >
+                <Setter Property="Margin" Value="0,5,0,0" />
+                <Setter Property="Width" Value="200" />
+            </Style>
+        </Grid.Resources>
+
+        <Button x:Name="ImportCADmodelButton" Grid.Row="0" Content="Import CAD model" Width="200"/>
+        <Button x:Name="PartSetupButton" Grid.Row="1" Content="Set up the part" Width="200"/>
+        <Button x:Name="MachineButton" Grid.Row="2" Content="Set up the machine" Width="200"/>
+        <Button x:Name="RoughingButton" Grid.Row="3" Content="Add roughing operation" Width="200"/>
+        <Button x:Name="ConcentricFButton" Grid.Row="4" Content="Add concentric finishing operations" Width="200"/>
+        <Button x:Name="WrappedButton" Grid.Row="5" Content="Add wrapped milling operation" Width="200"/>
+        <Button x:Name="DrillingButton" Grid.Row="6" Content="Add drilling operation" Width="200"/>
+        <Button x:Name="ContouringButton" Grid.Row="7" Content="Add contouring operation" Width="200"/>
+        <Button x:Name="CenterDrillingButton" Grid.Row="8" Content="Add center drilling operation" Width="200"/>
+        <Button x:Name="SpiralingButton" Grid.Row="9" Content="Add spiraling operation" Width="200"/>
+        <Button x:Name="EngravingButton" Grid.Row="10" Content="Add engraving operation" Width="200"/>
+        <Button x:Name="SimulateButton" Grid.Row="11" Content="Simulate" Width="200"/>
+    </Grid>
+</Window>
